@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Redirecting...</title>
+</head>
+<body>
+<script>
+window.addEventListener("load", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get("t") == "ah") {
+        targetUrl = "https://wax.atomichub.io/explorer/asset/wax-mainnet/" + urlParams.get("i");
+    } else if (urlParams.get("t") == "cc") {
+        targetUrl = "https://chainchamps.com/details/asset/" + urlParams.get("i");
+    } else if (urlParams.get("t") == "nb") {
+        targetUrl = "https://neftyblocks.com/assets/" + urlParams.get("i");
+    } else if (urlParams.get("t") == "nh") {
+        targetUrl = "https://nfthive.io/asset/" + urlParams.get("i");
+    }
+
+    if (targetUrl) {
+        window.location.href = targetUrl;
+    }
+});
+</script>
+</body>
+</html>
